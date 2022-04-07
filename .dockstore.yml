@@ -1,0 +1,8 @@
+version: 1.2
+workflows:
+  - subclass: WDL
+    primaryDescriptorPath: <String>
+    testParameterFiles: <String Array>
+    authors:
+      - name: Guillaume Butler-Laporte
+        email: guillaume.butler-laporte@mail.mcgill.ca
