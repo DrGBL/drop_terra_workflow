@@ -103,8 +103,8 @@ COPY MafDb.gnomAD.r2.1.GRCh38_3.10.0.tar.gz MafDb.gnomAD.r2.1.GRCh38_3.10.0.tar.
 RUN pip install ./drop 	&& rm -rf ./drop \
 	&& R CMD INSTALL 1.7.1.tar.gz \
 	&& rm -f 1.7.1.tar.gz \
-	&& R CMD INSTALL 1.2.1.tar.gz \
-	&& rm -f 1.2.1.tar.gz \
+	&& R CMD INSTALL 1.2.2.tar.gz \
+	&& rm -f 1.2.2.tar.gz \
 	&& R CMD INSTALL 1.0.4.tar.gz \
 	&& rm -f 1.0.4.tar.gz \
 	&& R CMD INSTALL MafDb.gnomAD.r2.1.GRCh38_3.10.0.tar.gz \
