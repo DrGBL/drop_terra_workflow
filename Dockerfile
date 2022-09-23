@@ -92,8 +92,8 @@ COPY drop drop
 #can also do RUN wget for each of the following instead of COPY. Your preference.
 #https://github.com/gagneurlab/OUTRIDER/archive/refs/tags/1.7.1.tar.gz
 COPY 1.7.1.tar.gz 1.7.1.tar.gz
-#https://github.com/gagneurlab/drop/archive/refs/tags/1.2.2.tar.gz
-COPY 1.2.2.tar.gz 1.2.2.tar.gz
+#https://github.com/c-mertes/FRASER/releases/tag/1.8.1
+COPY 1.8.1.tar.gz 1.8.1.tar.gz
 #https://github.com/gagneurlab/tMAE/archive/refs/tags/1.0.4.tar.gz
 COPY 1.0.4.tar.gz 1.0.4.tar.gz
 #https://bioconductor.org/packages/release/data/annotation/src/contrib/MafDb.gnomAD.r2.1.GRCh38_3.10.0.tar.gz
@@ -103,8 +103,8 @@ COPY MafDb.gnomAD.r2.1.GRCh38_3.10.0.tar.gz MafDb.gnomAD.r2.1.GRCh38_3.10.0.tar.
 RUN pip install ./drop 	&& rm -rf ./drop \
 	&& R CMD INSTALL 1.7.1.tar.gz \
 	&& rm -f 1.7.1.tar.gz \
-	&& R CMD INSTALL 1.2.2.tar.gz \
-	&& rm -f 1.2.2.tar.gz \
+	&& R CMD INSTALL 1.8.1.tar.gz\
+	&& rm -f 1.8.1.tar.gz\
 	&& R CMD INSTALL 1.0.4.tar.gz \
 	&& rm -f 1.0.4.tar.gz \
 	&& R CMD INSTALL MafDb.gnomAD.r2.1.GRCh38_3.10.0.tar.gz \
