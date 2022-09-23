@@ -87,6 +87,8 @@ RUN R -e "install.packages(c('shiny'), rdependencies=TRUE)" \
 	&& R -e "install.packages(c('R.utils','remotes', 'systemfonts', 'textshaping', 'ggplot2', 'tidyr', 'dplyr','rmarkdown', 'ggthemes', 'knitr', 'cowplot', 'data.table', 'magrittr','BiocManager', 'devtools','BBmisc', 'heatmaply', 'pheatmap', 'matrixStats', 'plotly', 'plyr', 'PRROC', 'reshape2', 'RcppArmadillo','extraDistr', 'ggrepel', 'VGAM'), rdependencies=TRUE)" \
 	&& R -e "BiocManager::install(c('BSgenome.Hsapiens.NCBI.GRCh38','BiocParallel', 'GenomicFeatures', 'SummarizedExperiment', 'BiocGenerics', 'DESeq2', 'GenomicRanges', 'IRanges', 'pcaMethods', 'S4Vectors','GenomicScores', 'BiocVersion', 'BSgenome', 'DelayedMatrixStats', 'HDF5Array', 'rhdf5', 'Rsubread','VariantAnnotation'))"
 
+#need to download this whole git folder: https://github.com/gagneurlab/drop/tree/master/drop
+COPY drop drop
 #can also do RUN wget for each of the following instead of COPY. Your preference.
 #https://github.com/gagneurlab/OUTRIDER/archive/refs/tags/1.7.1.tar.gz
 COPY 1.7.1.tar.gz 1.7.1.tar.gz
